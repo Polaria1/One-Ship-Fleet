@@ -19,3 +19,4 @@ Well, wonder no longer! One Ship Fleet aims to add a variety of upgrades that ar
 <br>
 # Mod Support
 - Lost in Midnight (Partial; currently, only the Warbird)
+- More soon!
