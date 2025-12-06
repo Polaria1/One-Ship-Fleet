@@ -18,5 +18,4 @@ Well, wonder no longer! One Ship Fleet aims to add a variety of upgrades that ar
 - More diverse upgrades and possibly short mission chains to obtain them
 <br>
 # Mod Support
-- Lost in Midnight
-  - Warbird
+- Lost in Midnight (Partial; currently, only the Warbird)
