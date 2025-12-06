@@ -16,7 +16,7 @@ Well, wonder no longer! One Ship Fleet aims to add a variety of upgrades that ar
 - Lost in Midnight (Scrapyard, Expasion) ship support
 - Sprites :(
 - More diverse upgrades and possibly short mission chains to obtain them
-<br>
+
 # Mod Support:
 - Lost in Midnight (Partial; currently, only the Warbird)
 
