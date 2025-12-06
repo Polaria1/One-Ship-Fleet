@@ -20,3 +20,6 @@ Well, wonder no longer! One Ship Fleet aims to add a variety of upgrades that ar
 # Mod Support:
 - Lost in Midnight
   - Warbird
+
+# Known Issues/Incompatibilities:
+- None, so far. Would probably cause balance issues with combat.ai or Tale of Apoxys.
