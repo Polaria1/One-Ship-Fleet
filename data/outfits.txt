@@ -1,0 +1,249 @@
+# Shield Emitters
+
+outfit "Overclocker Chip"
+	category "Systems"
+	cost 150000
+	thumbnail "outfit/limit breaker"
+	"mass" 5
+	"outfit space" -5
+	"shield generation multiplier" 0.4
+	"shield energy multiplier" 1.25
+	"shield heat" 0.8
+	"shield heat multiplier" 2.5
+	description "Out of the box, this debatably safe electronic chip claims to significantly boost shield generation when hooked up to a ship's shield generators by pushing them past factory specifications."
+	description "	Naturally, this kind of undue stress causes extreme heat buildup both in the chip itself and especially in any shield generators that actively modify the geometry of a ship's shield matrix."
+
+# Chassis Overhaul
+# I really want to implement this without it being completely broken and overpowered, but to be honest I'm not sure how.
+# One way to do it is to add a "Chassis Overhaul" to older ships. Actually, I think that would be cool. Let me try this.
+
+ship "Warbird" # Testing to make sure I don't accidentally overwrite anything.
+	attributes
+		"unremovable chassis" -1
+		"chassis overhaul" 1
+
+ship "Firebird"
+	attributes
+		"unremovable chassis" -1
+		"chassis overhaul" 1
+
+outfit "Chassis Overhaul"
+	category "Systems"
+	cost 7000000
+	thumbnail "outfit/outfit expansion"
+	mass -120
+	"unremovable chassis" 1
+	"chassis overhaul" -1
+	"hull" 500
+	"hull multiplier" 0.1
+	"outfit space" 30
+	"weapon capacity" 25
+	"engine capacity" 10
+	"cargo space" 10
+	"acceleration multiplier" 0.05
+	"turn multiplier" 0.05
+	description "Many old ships that have served for decades or even centuries have outdated or decaying chassis that aren't optimized to humanity's current standard of ship-building. By replacing parts of the frame and chassis with stronger, lighter materials, adding additional reinforcements, and reorganizing the internal layout of the ship, an aging ship can be made surprisingly nimble, robust, and capable."
+	description "However, such in-depth modifications are exorbitantly expensive - often the cost of the entire ship - so independent merchant captains are often better off obtaining another ship of the same class for the same investment."
+	description "Due to the nature of this upgrade, it cannot be removed, and can only be installed once. Also, not all ships require a chassis overhaul."
+
+
+# Human Armor Plates
+# Generally intended for medium/heavy warships, but maybe you could fit one on a smaller ship
+
+outfit "Armor Plating Adaptation Kit"
+	category "Systems"
+	cost 250000
+	thumbnail "outfit/unknown"
+	"mass" 20
+	"outfit space" -30
+	"armor plate" 1
+	"drag reduction" -0.1
+	description "This kit contains mounts and critical reinforcements to support the mounting of a set of extra armor plating on any starship that can fit it. The mounting hardware creates some drag, given its position on the exterior of the ship."
+
+outfit "Titanium Armor Plates"
+	category "Systems"
+	cost 940000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	"mass" 55
+	"outfit space" -35
+	hull 850
+	"hull multiplier" 0.15
+	"acceleration multiplier" -0.1
+	"turn multiplier" -0.1
+	"cooling inefficiency" 1
+	description "Particularly crafty captains and mechanics sometimes repurpose leftover metal plates and attach them to their ships for added protection in close combat. Titanium is widely used in starship construction, for chassis components and armor alike."
+	description "	Extra armor plating tends to slow a ship down due to its weight. It also tends to trap heat inside of the ship as an insulator, reducing the effectiveness of most cooling systems."
+
+outfit "Steel Armor Plates"
+	category "Systems"
+	cost 260000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	"mass" 90
+	"outfit space" -55
+	hull 1100
+	"hull multiplier" 0.2
+	"acceleration multiplier" -0.15
+	"turn multiplier" -0.15
+	"cooling inefficiency" 1.5
+	description "Particularly crafty captains and mechanics sometimes repurpose leftover metal plates and attach them to their ships for added protection in close combat. Steel is heavy compared to most lightweight starship manufacturing materials, such as aluminum or titanium, but is very strong."
+	description "	Extra armor plating tends to slow a ship down due to its weight. It also tends to trap heat inside of the ship as an insulator, reducing the effectiveness of most cooling systems."
+
+outfit "Lead Armor Plates"
+	category "Systems"
+	cost 310000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	"mass" 180
+	"outfit space" -65
+	hull 450
+	"hull multiplier" 0.08
+	"acceleration multiplier" -0.3
+	"turn multiplier" -0.3
+	"cooling inefficiency" 3
+	"scan interference" 3.5
+	"scan concealment" 20
+	"ion resistance" 9
+	"ion protection" 0.2
+	description "Particularly crafty captains and mechanics sometimes repurpose leftover metal plates and attach them to their ships for added protection in close combat. Lead is a terrible choice for armor plating; it is far too soft to deflect projectiles, has far too low a melting point to stop lasers or thermal weapons, and is incredibly heavy."
+	description "	However, with its electromagnetically insulative properties, lead plating tends to block the signals for most outfit and cargo scanners, concealing whatever innocent or illicit cargo may be stored beyond. It also provides significant resistance against ionizing radiation."
+	description "	Extra armor plating tends to slow a ship down due to its weight. It also tends to trap heat inside of the ship as an insulator, reducing the effectiveness of most cooling systems."
+
+outfit "Gold Armor Plates"
+	category "Systems"
+	cost 5400000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	"mass" 150
+	"outfit space" -60
+	hull 580
+	"hull multiplier" 0.1
+	"acceleration multiplier" -0.25
+	"turn multiplier" -0.25
+	"cooling inefficiency" 2
+	description "Particularly crafty captains and mechanics sometimes repurpose leftover metal plates and attach them to their ships for added protection in close combat. Gold is not a very good choice for extra armor; it is too soft and malleable to absorb much damage, very dense, and extremely expensive."
+	description "	Extra armor plating tends to slow a ship down due to its weight. It also tends to trap heat inside of the ship as an insulator, reducing the effectiveness of most cooling systems."
+
+outfit "Titanium-Yottrite Armor Plates"
+	category "Systems"
+	cost 41520000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	mass 45
+	"outfit space" -30
+	hull 3000
+	"hull multiplier" 0.4
+	"acceleration multiplier" -0.05
+	"turn multiplier" -0.05
+	"cooling inefficiency" 0.9
+	"hull repair multiplier" -0.25
+	"hull energy multiplier" 0.25
+	"hull heat multiplier" 0.25
+	"piercing resistance" 0.2
+	"corrosion resistance" 1
+	"ion resistance" 1
+	description "Particularly crafty captains and mechanics sometimes repurpose leftover metal plates and attach them to their ships for added protection in close combat. Yottrite has exceptional properties, and serves as the prime choice for Quarg alloys due to its hardness and strength for its weight."
+	description "	Yottrite's extreme resilience comes with the downside of being difficult to actively repair in combat."
+	description "	Extra armor plating tends to slow a ship down due to its weight. It also tends to trap heat inside of the ship as an insulator, reducing the effectiveness of most cooling systems."
+
+outfit "Heat Shield"
+	category "Systems"
+	cost 860000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	mass 60
+	"outfit space" -20
+	"acceleration multiplier" -0.1
+	"turn multiplier" -0.1
+	"cooling inefficiency" 1.5
+	"heat protection" 0.5
+	"burn protection" 0.5
+	"burn resistance" 0.2
+	description "This bulky heat shield, styled in much a similar manner to old Earth spacecraft and serving a similar purpose, fits on the outside of a ship to an available armor plating adapter. Its insulative properties result in significantly less heat absorption from thermal weaponry."
+
+outfit "Streamlined Panels"
+	category "Systems"
+	cost 675000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	mass -40
+	"outfit space" -30
+	"weapon capacity" -20
+	"engine capacity" -10
+	"acceleration multiplier" 0.15
+	"turn multiplier" 0.2
+	"drag reduction" 0.35
+	"hull multiplier" -0.2
+	"shield multiplier" -0.2
+	description "Replacing some of a ship's current armor and installing additional streamlined composite panels that fit into an available armor plating adapter provides a notable boost to a ship's top speed and makes it considerably more nimble at the cost of hull integrity."
+	description "	As a result of covering up exposed panels and streamlining surfaces around gun ports or engine exhausts, weapon space and engine space is slightly reduced. Some shield emitters are covered, reducing overall shield strength as well."
+
+outfit "Pulse Panels"
+	category "Systems"
+	cost 1400000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	"mass" 40
+	"outfit space" -30
+	"drag reduction" 0.1
+	"scan interference" 5
+	"ion resistance" 10
+	"ion protection" 0.35
+	"energy consumption" 2.5
+	"shield multiplier" -0.5
+	"shield generation multiplier" -0.25
+	"radar jamming" 12
+	description "These composite panels, fitted with high-powered EM counteremitters, intermittently send out short-ranged electromagnetic pulses to disrupt scans and destructively interfere with most wavelengths of ionizing radiation when fitted into an available armor plating adapter."
+	description "Unfortunately, the strong electrical impulses both consume a large amount of energy and severely interfere with any existing shield matrix. Perhaps unintentionally, they also tend to interfere with radar based systems."
+
+	
+outfit "Radar Absorbant Panels"
+	category "Systems"
+	cost 1100000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	mass 40
+	"outfit space" -35
+	"drag reduction" 0.1
+	"radar jamming" 72
+	description "These are composite panels painted with a radar absorbant coating. Installed into an available armor plating adapter, they considerably reduce the radar cross-section of the starship they're installed on, helping protect it from radar-guided missiles."
+	
+# Remnant
+
+outfit "Semi-Organic Armor Plates"
+	category "Systems"
+	licenses
+		Remnant
+	cost 260000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	"mass" 45
+	"outfit space" -30
+	hull 1660
+	"hull multiplier" 0.225
+	"acceleration multiplier" -0.1
+	"turn multiplier" -0.1
+	"cooling inefficiency" 1
+	"ramscoop" 2
+	"hull repair multiplier" 0.25
+	"hull energy multiplier" -0.15
+	description "The Remnant typically do not attach extra armor to their ships, but they recognize that the semi-organic material they use to build their ships is potentially valuable to you as auxillary defense."
+	description "	Stronger than steel and as light as titanium, the Remnant's go-to ship-building material is surprisingly effective as armor plating. The 'gills' found on most Remnant ships are also present in this plating, offering innate ramscooping similarly to a Remnant ship."
+	description "	The malleable, organic properties of Remnant ship tissue make it easy to repair on the fly."
+	description "	Extra armor plating tends to slow a ship down due to its weight. It also tends to trap heat inside of the ship as an insulator, reducing the effectiveness of most cooling systems."
+
+# We don't talk about this.
+	
+outfit "Freaky Armor Plates" # You found an easter egg!
+	category "Unique"
+	cost 69000412
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	mass 69
+	"outfit space" 5
+	"drag reduction" 500
+	"acceleration multiplier" 1.5
+	"hull multiplier" 4
+	"shield multiplier" 4
+	description "what if the Titanium-Yottrite Armor Plates were actually Freaky Armor Plates and instead of blowing off projectiles they blew you"
