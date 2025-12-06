@@ -15,9 +15,10 @@ Well, wonder no longer! One Ship Fleet aims to add a variety of upgrades that ar
 - Sprites :(
 - More diverse upgrades and possibly short mission chains to obtain them
 
-# Mod Support:
+# Mod Support (for upgrades that involve specific ships):
 - Lost in Midnight
   - Warbird
 
 # Known Issues/Incompatibilities:
 - None, so far. Would probably cause balance issues with combat.ai or Tale of Apoxys.
+- 
