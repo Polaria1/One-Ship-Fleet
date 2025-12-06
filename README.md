@@ -21,4 +21,4 @@ Well, wonder no longer! One Ship Fleet aims to add a variety of upgrades that ar
 
 # Known Issues/Incompatibilities:
 - None, so far. Would probably cause balance issues with combat.ai or Tale of Apoxys.
-- Existing ships will not be able to receive ship-specific upgrades, since the attributes are added when purchased from the shipyard. This likely can be solved by re-purchasing the ship.
+- Existing ships in a save file will not be able to receive ship-specific upgrades, since the attributes are added when purchased from the shipyard. This likely can be solved by re-purchasing the ship.
