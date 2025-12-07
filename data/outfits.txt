@@ -3,7 +3,7 @@
 outfit "Overclocker Chip"
 	category "Systems"
 	cost 150000
-	thumbnail "outfit/limit breaker"
+	thumbnail "outfit/limit breaker" # LiM dependency. Fix!!!
 	"mass" 5
 	"outfit space" -5
 	"shield generation multiplier" 0.4
@@ -14,8 +14,6 @@ outfit "Overclocker Chip"
 	description "	Naturally, this kind of undue stress causes extreme heat buildup both in the chip itself and especially in any shield generators that actively modify the geometry of a ship's shield matrix."
 
 # Chassis Overhaul
-# I really want to implement this without it being completely broken and overpowered, but to be honest I'm not sure how.
-# One way to do it is to add a "Chassis Overhaul" to older ships. Actually, I think that would be cool. Let me try this.
 
 ship "Warbird" # Testing to make sure I don't accidentally overwrite anything.
 	attributes
@@ -27,6 +25,16 @@ ship "Firebird"
 		"unremovable chassis" -1
 		"chassis overhaul" 1
 
+ship "Monitor"
+	attributes
+		"unremovable chassis" -1
+		"chassis overhaul" 1
+
+ship "Saber"
+	attributes
+		"unremovable chassis" -1
+		"chassis overhaul" 1
+
 outfit "Chassis Overhaul"
 	category "Systems"
 	cost 7000000
@@ -34,7 +42,7 @@ outfit "Chassis Overhaul"
 	mass -120
 	"unremovable chassis" 1
 	"chassis overhaul" -1
-	"hull" 500
+	"hull" 600
 	"hull multiplier" 0.1
 	"outfit space" 30
 	"weapon capacity" 25
@@ -42,10 +50,162 @@ outfit "Chassis Overhaul"
 	"cargo space" 10
 	"acceleration multiplier" 0.05
 	"turn multiplier" 0.05
-	description "Many old ships that have served for decades or even centuries have outdated or decaying chassis that aren't optimized to humanity's current standard of ship-building. By replacing parts of the frame and chassis with stronger, lighter materials, adding additional reinforcements, and reorganizing the internal layout of the ship, an aging ship can be made surprisingly nimble, robust, and capable."
-	description "However, such in-depth modifications are exorbitantly expensive - often the cost of the entire ship - so independent merchant captains are often better off obtaining another ship of the same class for the same investment."
-	description "Due to the nature of this upgrade, it cannot be removed, and can only be installed once. Also, not all ships require a chassis overhaul."
+	description "Many old ships that have served for decades or even centuries have outdated or decaying chassis that aren't optimized to humanity's current standard of ship-building. By replacing parts of the hull and chassis with stronger, lighter materials, adding additional reinforcements, and reorganizing the internal layout of the ship, an aging ship can be made surprisingly nimble, robust, and capable. This is a package aimed at medium warships."
+	description "	However, such in-depth modifications are exorbitantly expensive - often the cost of the entire ship - so independent merchant captains are often better off obtaining another ship of the same class for the same investment."
+	description "	Due to the nature of this upgrade, it cannot be removed, and can only be installed once. Also, not all ships require a chassis overhaul."
 
+ship "Leviathan"
+	attributes
+		"unremovable chassis (L)" -1
+		"overhaul (large)" 1
+
+outfit "Chassis Overhaul (Large)"
+	category "Systems"
+	cost 14900000
+	thumbnail "outfit/outfit expansion"
+	mass -230
+	"unremovable chassis (L)" 1
+	"overhaul (large)" -1
+	"hull" 1400
+	"hull multiplier" 0.15
+	"outfit space" 55
+	"weapon capacity" 30
+	"engine capacity" 25
+	"cargo space" 30
+	"acceleration multiplier" 0.05
+	"turn multiplier" 0.05
+	description "Many old ships that have served for decades or even centuries have outdated or decaying chassis that aren't optimized to humanity's current standard of ship-building. By replacing parts of the hull and chassis with stronger, lighter materials, adding additional reinforcements, and reorganizing the internal layout of the ship, an aging ship can be made surprisingly nimble, robust, and capable. This is a package aimed at heavy warships."
+	description "	However, such in-depth modifications are exorbitantly expensive - often the cost of the entire ship - so independent merchant captains are often better off obtaining another ship of the same class for the same investment."
+	description "	Due to the nature of this upgrade, it cannot be removed, and can only be installed once. Also, not all ships require a chassis overhaul."
+
+# Shield Overhaul
+# I'd like to do a couple different categories of this - one that enhances ships that are old or have primitive shields, like the chassis overhaul, and one that adds shields to ships that don't normally have them or have very little - such as Gegno or the upcoming Avgi ships. These will probably be through missions, and likely ship-specific.
+# Many of the ships that can accept a chassis overhaul will probably also accept a shield overhaul.
+
+ship "Firebird"
+	attributes
+		"unremovable shields" -1
+		"shield system overhaul" 1
+
+ship "Warbird"
+	attributes
+		"unremovable shields" -1
+		"shield system overhaul" 1
+
+ship "Monitor"
+	attributes
+		"unremovable shields" -1
+		"shield system overhaul" 1
+
+ship "Saber"
+	attributes
+		"unremovable shields" -1
+		"shield system overhaul" 1
+
+ship "Leviathan"
+	attributes
+		"unremovable shields" -1
+		"shield system overhaul" 1
+
+ship "Falcon"
+	attributes
+		"unremovable shields" -1
+		"shield system overhaul" 1
+
+outfit "Shield System Overhaul"
+	category "Systems"
+	cost 6700000
+	thumbnail "outfit/outfit expansion"
+	mass 35
+	"unremovable shields" 1
+	"shield system overhaul" -1
+	shields 600
+	"shield multiplier" 0.15
+	description "A ship's shield system is one of the most critical parts to its continued survival in deep space. Adding extra, modern emitters and adjusting their layout across the hull will allow a craft to endure more of a beating than expected."
+	description "	However, such an in-depth modification is extremely expensive, often doubling the cost of the ship it's performed on."
+	description "	Due to the nature of this upgrade, it cannot be removed, and can only be installed once. Also, not all ships are eligible for a shield system overhaul."
+
+# Let's experiment. The below will be through missions chains that I haven't decided on, but will probably involve a specialized shipyard/outfitter on a specific planet. However, for messing around purposes, I still wanna make sure they can't be applied to the wrong ships.
+
+ship Augen
+	attributes
+		"hardware (augen)" 1
+		"retrofitting (augen)" -1
+
+outfit "Retrofitting (Augen)"
+	category "Unique"
+	cost 52400000
+	thumbnail "outfit/outfit expansion"
+	mass 420
+	"hardware (augen)" -1
+	"retrofitting (augen)" 1
+	shields 72400
+	description "Though the Augen's hull layout makes it difficult to fit with shield emitters, the sheer durability of such an enormous craft when combined with a modern shield matrix is still absolutely nothing to scoff at. It's very feasible for a shielded Augen to rip apart a fleet of smaller enemy craft without a scratch to the armor plating underneath."
+	description "	Naturally, finding a sufficient shield generator is an entirely separate problem."
+
+ship Feldspar
+	attributes
+		"hardware (feldspar)" 1
+		"retrofitting (feldspar)" -1
+
+outfit "Retrofitting (Feldspar)"
+	category "Unique"
+	cost 12630000
+	thumbnail "outfit/outfit expansion"
+	mass 170
+	"hardware (feldspar)" -1
+	"retrofitting (feldspar)" 1
+	shields 13700
+	description "The Feldspar's shape provides a surprising amount of surface area to fit a set of modern shield emitters that turn it from an already hardy carrier to something much more capable of properly protecting its complement of six Halite fighters."
+	description "	Naturally, finding a sufficient shield generator is an entirely separate problem."
+
+ship Protolith
+	attributes
+		"hardware (protolith)" 1
+		"retrofitting (protolith)" -1
+
+outfit "Retrofitting (Protolith)"
+	category "Unique"
+	cost 37600000
+	thumbnail "outfit/outfit expansion"
+	mass 340
+	"hardware (protolith)" -1
+	"retrofitting (protolith)" 1
+	shields 22600
+	description "When you'd shown the Protolith to Asai - a massive, hulking city-ship with no guns and no turrets - she seemed bewildered on why anyone would possibly tack a set of shields onto it, but when you handed her thirty-seven million credits she immediately climbed onto the hull and started measurements."
+	description "	Time to figure out what in the world you'd ever use this for..."
+
+ship Gneiss
+	attributes
+		"hardware (gneiss)" 1
+		"retrofitting (gneiss)" -1
+
+outfit "Retrofitting (Gneiss)"
+	category "Unique"
+	cost 15200000
+	thumbnail "outfit/outfit expansion"
+	mass 140
+	"hardware (gneiss)" -1
+	"retrofitting (gneiss)" 1
+	shields 18700
+	description "The Gneiss, already a formidable warship in its own right, has a very workable shape that's somewhat similar to a human ship - which makes fitting it with shields expensive, but not particularly hard. Though its mobility, like other Vi warships, still leaves a lot to be desired, the plentiful shielding and thick armor makes it a tough nut to crack."
+
+ship Coesite
+	attributes
+		"hardware (coesite)" 1
+		"retrofitting (coesite)" -1
+
+outfit "Retrofitting (Coesite)"
+	category "Unique"
+	cost 1540000
+	thumbnail "outfit/outfit expansion"
+	mass 40
+	"hardware (coesite)" -1
+	"retrofitting (coesite)" 1
+	shields 3900
+	description "A set of modern shield emitters would lend the Coesite some much-needed durability against the Vi's ballistic weaponry - if only they were capable of designing them on anything larger than a fighter. This shield package grants a fantasy that many Scin scientists probably dream of."
+
+# Other Upgrades
 
 # Human Armor Plates
 # Generally intended for medium/heavy warships, but maybe you could fit one on a smaller ship
@@ -125,7 +285,7 @@ outfit "Gold Armor Plates"
 	description "Particularly crafty captains and mechanics sometimes repurpose leftover metal plates and attach them to their ships for added protection in close combat. Gold is not a very good choice for extra armor; it is too soft and malleable to absorb much damage, very dense, and extremely expensive."
 	description "	Extra armor plating tends to slow a ship down due to its weight. It also tends to trap heat inside of the ship as an insulator, reducing the effectiveness of most cooling systems."
 
-outfit "Titanium-Yottrite Armor Plates"
+outfit "Titanium-Yottrite Armor Plates" # This one will probably be crafted somehow?
 	category "Systems"
 	cost 41520000
 	thumbnail "outfit/unknown"
@@ -195,7 +355,7 @@ outfit "Pulse Panels"
 	"shield generation multiplier" -0.25
 	"radar jamming" 12
 	description "These composite panels, fitted with high-powered EM counteremitters, intermittently send out short-ranged electromagnetic pulses to disrupt scans and destructively interfere with most wavelengths of ionizing radiation when fitted into an available armor plating adapter."
-	description "Unfortunately, the strong electrical impulses both consume a large amount of energy and severely interfere with any existing shield matrix. Perhaps unintentionally, they also tend to interfere with radar based systems."
+	description "	Unfortunately, the strong electrical impulses both consume a large amount of energy and severely interfere with any existing shield matrix. Perhaps unintentionally, they also tend to interfere with radar based systems."
 
 	
 outfit "Radar Absorbant Panels"
@@ -215,7 +375,7 @@ outfit "Semi-Organic Armor Plates"
 	category "Systems"
 	licenses
 		Remnant
-	cost 260000
+	cost 700000
 	thumbnail "outfit/unknown"
 	"armor plate" -1
 	"mass" 45
@@ -229,9 +389,30 @@ outfit "Semi-Organic Armor Plates"
 	"hull repair multiplier" 0.25
 	"hull energy multiplier" -0.15
 	description "The Remnant typically do not attach extra armor to their ships, but they recognize that the semi-organic material they use to build their ships is potentially valuable to you as auxillary defense."
-	description "	Stronger than steel and as light as titanium, the Remnant's go-to ship-building material is surprisingly effective as armor plating. The 'gills' found on most Remnant ships are also present in this plating, offering innate ramscooping similarly to a Remnant ship."
+	description "	Stronger than steel and as light as titanium, the Remnant's go-to ship-building material is unsurprisingly very effective as armor plating. The 'gills' found on most Remnant ships are also present in this plating, offering innate ramscooping similarly to a Remnant ship."
 	description "	The malleable, organic properties of Remnant ship tissue make it easy to repair on the fly."
 	description "	Extra armor plating tends to slow a ship down due to its weight. It also tends to trap heat inside of the ship as an insulator, reducing the effectiveness of most cooling systems."
+
+# Wanderer
+
+# I'd like to make this enter production shortly after the Wanderers start making their auxillary cooling systems, say, a month after they've had some time to innovate. For now, it's available immediately.
+
+outfit "Radiative Armor Plating"
+	category "Systems"
+	licenses
+		"Wanderer Outfits"
+	cost 2260000
+	thumbnail "outfit/unknown"
+	"armor plate" -1
+	mass 70
+	"ion resistance" 0.2
+	"active cooling" 79
+	"cooling" 20
+	"heat capacity" 600
+	"cooling energy" 1
+	description "In their ever-escalating conflict with the Unfettered, the Wanderers have found trouble with stuffing Sunbeams onto their retro-fitted science vessels, which tend to overheat under the intense strain of combat. Taking notes from their self-cooling engines, they created a universal lightweight armor package that embodies their unique knack for hybrid efficiency."
+	description "	Electrically dissipating and thermally conductive external plating helps Wanderer warships shrug off the ionizing effects of Ion Cannon hits, while a system of active cooling pumps and pipes routes heat directly from the ship's systems to the armor plating, where it radiates out into space as long as there is a small amount of energy to run them."
+	description "	While considerably more sophisticated than their primitive heatsinks, this package is also exorbitantly expensive and takes more careful planning to install - and trades the opportunity cost of additional hull plating for cooling."
 
 # We don't talk about this.
 	
@@ -247,3 +428,20 @@ outfit "Freaky Armor Plates" # You found an easter egg!
 	"hull multiplier" 4
 	"shield multiplier" 4
 	description "what if the Titanium-Yottrite Armor Plates were actually Freaky Armor Plates and instead of blowing off projectiles they blew you"
+
+# Unique Outfits (Will be obtained rarely or through missions)
+
+#ship "vyu-Ir"
+#	outfits
+#		"Rulei Bio-Crystal" 4
+
+#outfit "Rulei Bio-Crystal" # I forget how to add a flotsam sprite. This is also untested, so will be commented out until it is.
+#	category "Unique"
+#	cost 1000000
+#	thumbnail "outfit/quantum keystone"
+#	mass 5
+#	"outfit space" -5
+#	"flotsam chance" 1
+#	"shield protection" 0.05
+#	description "A chunk of 'hull' broken off of the Solemnity. Handling it is migraine-inducing, but being separated from the host ship seems to have nullified any fatal abilities. You still probably shouldn't touch this for very long, but when integrated into your ship, it seems to aide the shield system marginally."
+#	description "Were your hands always that pink?"
