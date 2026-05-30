@@ -16,7 +16,7 @@ Well, wonder no longer! One Ship Fleet aims to add a variety of upgrades that ar
 - More diverse upgrades and possibly short mission chains to obtain them
 
 # Mod Support (for upgrades that involve specific ships):
-- Lost in Midnight
+- Pirate Expansion
   - Warbird
 
 # Known Issues/Incompatibilities:
